@@ -1,0 +1,26 @@
+{
+  "name": "klip-contracts",
+  "version": "1.0.0",
+  "description": "Klip Contracts",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "test": "truffle test"
+  },
+  "author": "IkonicTEAM",
+  "license": "",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0",
+    "@openzeppelin/test-helpers": "^0.5.12",
+    "dotenv": "^9.0.2"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.4.2",
+    "truffle": "^5.4.3",
+    "truffle-flattener": "^1.5.0",
+    "truffle-plugin-verify": "^0.5.12"
+  }
+}

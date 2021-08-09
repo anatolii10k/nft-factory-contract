@@ -1,0 +1,783 @@
+{
+  "contractName": "HasSecondarySale",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkSecondarySale",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "setSecondarySale",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"checkSecondarySale\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"setSecondarySale\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/tokens/HasSecondarySale.sol\":\"HasSecondarySale\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0x5718c5df9bd67ac68a796961df938821bb5dc0cd4c6118d77e9145afb187409b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d10e1d9b26042424789246603906ad06143bf9a928f4e99de8b5e3bdc662f549\",\"dweb:/ipfs/Qmejonoaj5MLekPus229rJQHcC6E9dz2xorjHJR84fMfmn\"]},\"@openzeppelin/contracts/utils/introspection/ERC165Storage.sol\":{\"keccak256\":\"0x90716b47325c5cd49d4eef5bbe4cba711c81ce317479038e4f0a9a17a206945a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://abab613a1bff1c82cecf493e2fa4f940a21151f477d46e9593e14ee87a7f8be0\",\"dweb:/ipfs/QmXTm38aLpUaAwxBLXhtcLFmeDNLXQVhqGdbkY3mvZm1zD\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6\",\"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx\"]},\"project:/contracts/tokens/HasSecondarySale.sol\":{\"keccak256\":\"0xd8d3e25987885306869c50898405afe6cee3f2a7223e019093d52f38f043c8e6\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://ec5fea1b6cff7e146eff673a8334947f70bbee64e54127eff99b18ff071dee1d\",\"dweb:/ipfs/QmTqirQQaWNZ3eUP6wgNyGP9DhadLF9NdpdiJ6oNWoGjEQ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.8.4;\r\n// SPDX-License-Identifier: UNLICENSED\r\n\r\nimport \"@openzeppelin/contracts/utils/introspection/ERC165Storage.sol\";\r\n\r\nabstract contract HasSecondarySale is ERC165Storage {\r\n\r\n    /*\r\n     * bytes4(keccak256('checkSecondarySale(uint256)')) == 0x0e883747\r\n     * bytes4(keccak256('setSecondarySale(uint256)')) == 0x5b1d0f4d\r\n     *\r\n     * => 0x0e883747 ^ 0x5b1d0f4d == 0x5595380a\r\n     */\r\n    bytes4 private constant _INTERFACE_ID_HAS_SECONDARY_SALE = 0x5595380a;\r\n\r\n    constructor() {\r\n        _registerInterface(_INTERFACE_ID_HAS_SECONDARY_SALE);\r\n    }\r\n\r\n    function checkSecondarySale(uint256 id) public virtual view returns (bool);\r\n    function setSecondarySale(uint256 id) public virtual;\r\n}",
+  "sourcePath": "E:\\BlockChain_Workspace\\MV\\ikonic-contracts\\contracts\\tokens\\HasSecondarySale.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/tokens/HasSecondarySale.sol",
+    "exportedSymbols": {
+      "ERC165": [
+        4159
+      ],
+      "ERC165Storage": [
+        4210
+      ],
+      "HasSecondarySale": [
+        8269
+      ],
+      "IERC165": [
+        4222
+      ]
+    },
+    "id": 8270,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8242,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:43"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/introspection/ERC165Storage.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/ERC165Storage.sol",
+        "id": 8243,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8270,
+        "sourceUnit": 4211,
+        "src": "67:71:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 8244,
+              "name": "ERC165Storage",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4210,
+              "src": "180:13:43"
+            },
+            "id": 8245,
+            "nodeType": "InheritanceSpecifier",
+            "src": "180:13:43"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 8269,
+        "linearizedBaseContracts": [
+          8269,
+          4210,
+          4159,
+          4222
+        ],
+        "name": "HasSecondarySale",
+        "nameLocation": "160:16:43",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 8248,
+            "mutability": "constant",
+            "name": "_INTERFACE_ID_HAS_SECONDARY_SALE",
+            "nameLocation": "441:32:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8269,
+            "src": "417:69:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 8246,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "417:6:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "hexValue": "30783535393533383061",
+              "id": 8247,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "476:10:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1435842570_by_1",
+                "typeString": "int_const 1435842570"
+              },
+              "value": "0x5595380a"
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 8255,
+              "nodeType": "Block",
+              "src": "509:71:43",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 8252,
+                        "name": "_INTERFACE_ID_HAS_SECONDARY_SALE",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8248,
+                        "src": "539:32:43",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 8251,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4209,
+                      "src": "520:18:43",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 8253,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "520:52:43",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 8254,
+                  "nodeType": "ExpressionStatement",
+                  "src": "520:52:43"
+                }
+              ]
+            },
+            "id": 8256,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8249,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "506:2:43"
+            },
+            "returnParameters": {
+              "id": 8250,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "509:0:43"
+            },
+            "scope": 8269,
+            "src": "495:85:43",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "functionSelector": "0e883747",
+            "id": 8263,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkSecondarySale",
+            "nameLocation": "597:18:43",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8258,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "624:2:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8263,
+                  "src": "616:10:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 8257,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "616:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "615:12:43"
+            },
+            "returnParameters": {
+              "id": 8262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8261,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8263,
+                  "src": "657:4:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 8260,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "657:4:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "656:6:43"
+            },
+            "scope": 8269,
+            "src": "588:75:43",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "5b1d0f4d",
+            "id": 8268,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setSecondarySale",
+            "nameLocation": "678:16:43",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8266,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8265,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "703:2:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8268,
+                  "src": "695:10:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 8264,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "695:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "694:12:43"
+            },
+            "returnParameters": {
+              "id": 8267,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "721:0:43"
+            },
+            "scope": 8269,
+            "src": "669:53:43",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 8270,
+        "src": "142:583:43",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:725:43"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/tokens/HasSecondarySale.sol",
+    "exportedSymbols": {
+      "ERC165": [
+        4159
+      ],
+      "ERC165Storage": [
+        4210
+      ],
+      "HasSecondarySale": [
+        8269
+      ],
+      "IERC165": [
+        4222
+      ]
+    },
+    "id": 8270,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8242,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:43"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/introspection/ERC165Storage.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/ERC165Storage.sol",
+        "id": 8243,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 8270,
+        "sourceUnit": 4211,
+        "src": "67:71:43",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 8244,
+              "name": "ERC165Storage",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4210,
+              "src": "180:13:43"
+            },
+            "id": 8245,
+            "nodeType": "InheritanceSpecifier",
+            "src": "180:13:43"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 8269,
+        "linearizedBaseContracts": [
+          8269,
+          4210,
+          4159,
+          4222
+        ],
+        "name": "HasSecondarySale",
+        "nameLocation": "160:16:43",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 8248,
+            "mutability": "constant",
+            "name": "_INTERFACE_ID_HAS_SECONDARY_SALE",
+            "nameLocation": "441:32:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8269,
+            "src": "417:69:43",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 8246,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "417:6:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "hexValue": "30783535393533383061",
+              "id": 8247,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "476:10:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1435842570_by_1",
+                "typeString": "int_const 1435842570"
+              },
+              "value": "0x5595380a"
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 8255,
+              "nodeType": "Block",
+              "src": "509:71:43",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 8252,
+                        "name": "_INTERFACE_ID_HAS_SECONDARY_SALE",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8248,
+                        "src": "539:32:43",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 8251,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4209,
+                      "src": "520:18:43",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 8253,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "520:52:43",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 8254,
+                  "nodeType": "ExpressionStatement",
+                  "src": "520:52:43"
+                }
+              ]
+            },
+            "id": 8256,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8249,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "506:2:43"
+            },
+            "returnParameters": {
+              "id": 8250,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "509:0:43"
+            },
+            "scope": 8269,
+            "src": "495:85:43",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "functionSelector": "0e883747",
+            "id": 8263,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkSecondarySale",
+            "nameLocation": "597:18:43",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8258,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "624:2:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8263,
+                  "src": "616:10:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 8257,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "616:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "615:12:43"
+            },
+            "returnParameters": {
+              "id": 8262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8261,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8263,
+                  "src": "657:4:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 8260,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "657:4:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "656:6:43"
+            },
+            "scope": 8269,
+            "src": "588:75:43",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "5b1d0f4d",
+            "id": 8268,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setSecondarySale",
+            "nameLocation": "678:16:43",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8266,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8265,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "703:2:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8268,
+                  "src": "695:10:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 8264,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "695:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "694:12:43"
+            },
+            "returnParameters": {
+              "id": 8267,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "721:0:43"
+            },
+            "scope": 8269,
+            "src": "669:53:43",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 8270,
+        "src": "142:583:43",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:725:43"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.2",
+  "updatedAt": "2021-09-08T12:26:57.617Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "See {IERC165-supportsInterface}."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
